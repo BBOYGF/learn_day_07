@@ -15,5 +15,10 @@
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <!--配置文件解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--配置一些属性  配置文件最大为10*1024*1024-->
+        <property name="maxUploadSize" value="10485760"/>
+     </bean>
     <mvc:annotation-driven/>
 </beans>
